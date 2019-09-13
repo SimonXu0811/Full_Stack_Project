@@ -1,0 +1,13 @@
+#bu {
+  background-color: #1976d2;
+  color: white;
+  float: left;
+  margin-right: 27px;
+}
+.nav-item{
+  left: 93%;
+  position: absolute;
+}
+.tbody{
+  text-align: center;
+}

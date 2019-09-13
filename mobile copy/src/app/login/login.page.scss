@@ -1,0 +1,24 @@
+
+:host {
+  ion-content {
+    --background: url('http://5b0988e595225.cdn.sohucs.com/images/20180706/bc909ca7df79463d84dd7d8653d5890d.jpeg') no-repeat 100% 100%;
+  }
+}
+.text-field{
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left:25%;
+  top:10%;
+}
+.button{
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 40%;
+  margin-top: 100px;
+}
+.icon{
+  font-size: xx-large;
+  margin-bottom: 5px;
+}

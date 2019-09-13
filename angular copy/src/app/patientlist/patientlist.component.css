@@ -1,0 +1,13 @@
+.nav-item{
+  left: 93%;
+  position: absolute;
+}
+.panel-body{
+  text-align: center;
+}
+#middle{
+  color: green;
+}
+#high{
+  color: red;
+}

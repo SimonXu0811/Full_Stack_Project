@@ -1,0 +1,31 @@
+
+
+<div  class="panel panel-default">
+<div ng-app="login" class="panel-body" >
+  <div ng-controller="loginController">
+    <form id="form">
+      <div class="panel-heading">
+        <br>
+        <br>
+        <h3 style="text-align: center">Welcome to Login</h3>
+      </div>
+      <div id="textedfild">
+      <input class="username" [(ngModel)]="user.username" id="User-Name" type="text" placeholder="Enter your username" name="username" required />
+      <br>
+      <br>
+        <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+      <input class="password" id="Password" type="password" placeholder="Enter your password" name="password" [(ngModel)]="user.password"  required />
+      <br>
+      <div id="button" >
+        <button style="font-size: x-large" type="submit" (click)="login()" >Login</button>
+      </div>
+
+        <div id="reminder">
+          <h6>If you forget your password please contact with Admin</h6>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+</div>

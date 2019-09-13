@@ -1,0 +1,28 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Last 7 Days Report
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <google-chart style="font-size: x-small" #chart
+                [title]="title"
+                [type]="type"
+                [data]="[
+                        [time1, n1],
+                        [time2, n2],
+                        [time3, n3],
+                        [time4, n4],
+                        [time5, n5],
+                        [time6, n6],
+                        [time7, n7]
+                        ]"
+                [columnNames]="columnNames"
+                [options]="options"
+                [width]="width"
+                [height]="height">
+  </google-chart>
+</ion-content>

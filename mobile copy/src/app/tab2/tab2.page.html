@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Edit Today's Report
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="font-size: small; align-items: center">
+    <ion-row style="font-size: medium">
+      <ion-col style="text-align: center">Date</ion-col>
+      <ion-col style="text-align: center">Time</ion-col>
+      <ion-col style="text-align: center">Location</ion-col>
+      <ion-col style="text-align: center">Edit</ion-col>
+    </ion-row>
+
+  <ion-row style="align-items: center; border: 1px solid" *ngFor="let patient of patients " >
+    <ion-col style="text-align: center">
+      <ion-datetime  displayFormat="YYYY-MM-DD" min="2019-01-01" max={{today}} [(ngModel)] = patient.date></ion-datetime>
+    </ion-col>
+    <ion-col style="text-align: center">
+      <ion-datetime displayFormat="HH:mm:ss" min="00:00:00" max="23:59:59"  [(ngModel)] = patient.time></ion-datetime>
+    </ion-col>
+    <ion-col style="text-align: center">
+      <ion-select [(ngModel)] = patient.location>
+        <ion-select-option value="indoors">indoors</ion-select-option>
+        <ion-select-option value="outdoors">outdoors</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <ion-col style="text-align: center">
+      <button (click)="edit(patient)">Edit</button>
+    </ion-col>
+    <br>
+  </ion-row>
+</ion-content>

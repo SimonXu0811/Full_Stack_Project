@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Create  Report
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <br>
+
+  <ion-row >
+    <ion-col size="1"></ion-col>
+    <ion-col size="3">
+      <!--Date Col 1-->
+
+      <ion-label style="font-size: large">
+        <ion-icon name="Calendar" class="icon"></ion-icon>
+        Date:
+      </ion-label>
+      <p style="font-size: small" class="par">Y-M-D</p>
+    </ion-col>
+
+    <ion-col size="1"></ion-col>
+    <!--Date Col 2-->
+    <ion-col>
+      <ion-item style="border: 1px solid;">
+        <ion-datetime style="font-size: medium" displayFormat="YYYY-MM-DD" min="2019-01-01" max={{today}}  [(ngModel)]="datenow"></ion-datetime>
+      </ion-item>
+    </ion-col>
+
+    <ion-col size="1"></ion-col>
+  </ion-row >
+  <br>
+  <br>
+
+  <!--Time Row-->
+  <ion-row >
+    <ion-col size="1"></ion-col>
+    <ion-col size="3">
+      <ion-label style="font-size: large">
+        <ion-icon name="Time" class="icon"></ion-icon>
+        Time:
+      </ion-label>
+      <p style="font-size: small">HH:MM:DD</p>
+    </ion-col>
+
+    <ion-col size="1"></ion-col>
+
+    <ion-col>
+        <ion-item style="border: 1px solid;">
+          <ion-datetime style="font-size: medium" displayFormat="HH:mm:ss" min="00:00:00" max="23:59:59" [(ngModel)]="timenow"></ion-datetime>
+        </ion-item>
+    </ion-col>
+
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+  <br>
+  <br>
+
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col size="3">
+      <ion-label style="font-size: large" class ="location" >
+        <ion-icon name="pin"></ion-icon>
+        Location:
+      </ion-label>
+    </ion-col>
+
+    <ion-col size="1"></ion-col>
+
+    <ion-col style="border:1px solid">
+      <ion-label position="float" style="font-size: small; text-align: right">Are you in a room?</ion-label>
+
+        <ion-select class="select" placeholder="Select" [(ngModel)]="location">
+          <ion-select-option value="indoors">indoors</ion-select-option>
+          <ion-select-option value="outdoors">outdoors</ion-select-option>
+        </ion-select>
+
+    </ion-col>
+
+    <ion-col size="1"></ion-col>
+  </ion-row>
+  <br>
+  <br>
+  <ion-row>
+    <ion-col size="1">
+    </ion-col>
+    <ion-col size="5"></ion-col>
+    <ion-col>
+      <ion-item lines="none">
+        <button style="font-size: large" class="button" (click)="submit()">Submit</button>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

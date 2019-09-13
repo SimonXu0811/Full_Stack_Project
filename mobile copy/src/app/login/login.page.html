@@ -1,0 +1,23 @@
+<ion-content class="bg">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+  <br>
+  <ion-item class="text-field">
+    <ion-label>
+      <ion-icon name="contact" class="icon" style="margin-right: 15px"></ion-icon>
+    </ion-label>
+    <ion-input name="username" type="text" placeholder="UserName" [(ngModel)]="username" required style="margin-top: 7px"></ion-input>
+  </ion-item>
+  <br>
+  <br>
+  <button button (click)="login(username)" class='button'
+          data-toggle="modal" data-target="#myModal" >&nbsp;&nbsp;&nbsp;LOGIN</button>
+</ion-content>
+</ion-content>
